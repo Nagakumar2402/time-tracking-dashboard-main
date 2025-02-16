@@ -1,0 +1,239 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --workLightRed: hsl(15, 100%, 70%);
+  --playSoftBlue: hsl(195, 74%, 62%);
+  --studyLightRed: hsl(348, 100%, 68%);
+  --exerciseLimegreen: hsl(145, 58%, 55%);
+  --socialViolet: hsl(264, 64%, 52%);
+  --careSoftOrange: hsl(43, 84%, 65%);
+  --veryDarkBlue: hsl(226, 43%, 10%);
+  --darkBlue: hsl(235, 46%, 20%);
+  --destructedBlue: hsl(235, 45%, 61%);
+  --PaleBlue: hsl(236, 100%, 87%);
+  --weight400: 400;
+  --weight500: 500;
+  --weight300: 300;
+  --primaryFont: "Rubik", sans-serif;
+  --textClr: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size-adjust: none;
+  font-family: var(--primaryFont);
+  background-color: var(--veryDarkBlue);
+  color: var(--textClr);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 1480px;
+  height: 43.125rem;
+  display: flex;
+  gap: 2.6rem;
+}
+.left {
+  flex: 1.2;
+  background-color: var(--darkBlue);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.right {
+  flex: 3.8;
+  border-radius: 1rem;
+  display: grid;
+  gap: 2.6rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.name {
+  background-color: var(--Blue);
+  border-radius: 1rem;
+  flex: 2.3;
+  padding-inline: 2.5rem;
+  padding-top: 3rem;
+}
+.image {
+  width: 115px;
+  border: #fff 4px solid;
+  border-radius: 50%;
+  margin-bottom: 3rem;
+}
+.title {
+  font-size: 1.2rem;
+  color: var(--PaleBlue);
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+}
+.jeremy {
+  font-size: 3.3rem;
+  font-weight: 300;
+  line-height: 3.8rem;
+}
+.activity {
+  flex: 1;
+  padding-inline: 2.5rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.activity p {
+  font-size: 1.5rem;
+  color: var(--PaleBlue);
+}
+.activity p.active {
+  color: var(--textClr);
+}
+
+.box {
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.work {
+  background-color: var(--workLightRed);
+}
+.play {
+  background-color: var(--playSoftBlue);
+}
+.study {
+  background-color: var(--studyLightRed);
+}
+.social {
+  background-color: var(--socialViolet);
+}
+.self {
+  background-color: var(--careSoftOrange);
+}
+.exercise {
+  background-color: var(--exerciseLimegreen);
+}
+.imagcontainer {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: flex;
+  justify-content: end;
+  height: 50px;
+}
+.imagcontainer img {
+  width: 140px;
+  padding-right: 1.5rem;
+  object-fit: cover;
+  background-position: center;
+}
+.activityContainer {
+  background-color: var(--darkBlue);
+  height: calc(100% - 50px);
+  border-radius: 1rem;
+  padding-inline: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+.act_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.act_title p {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.time {
+  display: flex;
+  flex-direction: column;
+}
+.time h2 {
+  margin-top: 2rem;
+  font-weight: 300;
+  font-size: 4.7rem;
+}
+.time p {
+  margin-top: 0.7rem;
+  color: var(--destructedBlue);
+}
+@media (max-width: 768px) {
+  .activityContainer {
+    top: -20px; /* Cover background on smaller screens */
+    padding-inline: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .imagcontainer img {
+    width: 100px; /* Reduce image size for mobile */
+  }
+
+  .time h2 {
+    font-size: 3.5rem; /* Adjust font size for mobile */
+  }
+
+  .time p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 468px) {
+  .container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .left {
+  }
+  .image {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0;
+  }
+  .name {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    align-items: center;
+  }
+  .title {
+    margin-bottom: 0;
+  }
+  .jeremy {
+    font-size: 2rem;
+    line-height: normal;
+  }
+  .activity {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+  }
+  .activity p {
+    font-size: 1.2rem;
+  }
+  .right {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1.5rem;
+  }
+  .time {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1rem;
+  }
+  .time h2 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .activityContainer {
+    height: 100%;
+  }
+}
