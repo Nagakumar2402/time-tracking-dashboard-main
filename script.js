@@ -35,7 +35,7 @@ const showData = (data) => {
     right.innerHTML += `
       <div class="box ${singleData.title.toLowerCase()}">
         <div class="imagcontainer">
-          <img src='./images/${singleData.title}.svg' alt='${
+          <img src='./images/${singleData.title.toLocaleLowerCase()}.svg' alt='${
       singleData.title
     }' />
         </div>
