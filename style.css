@@ -91,6 +91,7 @@ body {
 .activity p {
   font-size: 1.5rem;
   color: var(--PaleBlue);
+  cursor: pointer;
 }
 .activity p.active {
   color: var(--textClr);

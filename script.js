@@ -8,6 +8,11 @@ const fetchData = async () => {
       method: "GET",
     });
     const data = await response.json();
+
+    if (activity.length > 0) {
+      activity[0].classList.add("active");
+      timeframe = activity[0].textContent.toLowerCase();
+    }
     activity.forEach((singleActivity) => {
       singleActivity.addEventListener("click", () => {
         activity.forEach((act) => {
@@ -20,7 +25,7 @@ const fetchData = async () => {
     });
     showData(data);
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -49,4 +54,4 @@ const showData = (data) => {
   });
 };
 
-fetchData();
+window.addEventListener("load", fetchData);
