@@ -35,9 +35,7 @@ const showData = (data) => {
     right.innerHTML += `
       <div class="box ${singleData.title.toLowerCase()}">
         <div class="imagcontainer">
-          <img src='./images/${singleData.title.toLocaleLowerCase()}.svg' alt='${
-      singleData.title
-    }' />
+          <img src='./images/${singleData.title.toLocaleLowerCase()}.svg' alt='${singleData.title.toLocaleLowerCase()}' />
         </div>
         <div class="activityContainer">
           <div class="act_title">
